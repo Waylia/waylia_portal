@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Camera, Sparkles, Share2, Shirt, FileText, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-// 使用生成的在线图片URL
-const heroBg = 'https://miaoda.feishu.cn/aily/api/v1/files/static/3cca0937ff20489cb90fee20f7ab8e3c_ve_miaoda';
+
+const heroBg = '/images/hero.jpg';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -49,8 +49,8 @@ export default function HeroSection() {
           className="w-full h-full object-cover"
         />
         {/* Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/20 to-black/55" />
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background via-background/40 to-transparent" />
       </div>
 
       {/* Floating Decorative Icons */}

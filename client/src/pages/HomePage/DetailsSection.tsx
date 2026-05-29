@@ -8,7 +8,7 @@ const features = [
     description: '告别繁琐的旅行规划，只需输入目的地、天数和偏好，AI 即刻为你量身定制完整攻略。从景点路线到美食推荐，从交通方案到住宿建议，让你的旅行无忧无虑。',
     highlights: ['智能路线规划，最优行程安排', '当地美食与特色体验推荐', '实时交通与住宿建议'],
     icon: Map,
-    image: 'https://miaoda.feishu.cn/aily/api/v1/files/static/58959626a0c04e09bff272fe03dd50a4_ve_miaoda',
+    image: '/images/guide.jpg',
   },
   {
     number: '02',
@@ -16,7 +16,7 @@ const features = [
     description: '旅行照片不够完美？AI 修图功能一键美化，支持清新、复古、胶片等多种风格转换。智能增强光影、优化色彩，让每一张照片都宛如大片。',
     highlights: ['多种艺术风格一键转换', '智能光影与色彩优化', '人像美化与自然修饰'],
     icon: Wand2,
-    image: 'https://miaoda.feishu.cn/aily/api/v1/files/static/2a5ee66422d445d2a89d4c88c943f297_ve_miaoda',
+    image: '/images/photo.jpg',
   },
   {
     number: '03',
@@ -24,7 +24,7 @@ const features = [
     description: '拍照总是姿势僵硬？上传照片，AI 智能分析人物姿态，结合场景类型给出专业拍摄建议。从肢体语言到表情管理，让你轻松拍出杂志大片感。',
     highlights: ['智能姿态识别与分析', '场景化拍摄建议', '专业构图与光线指导'],
     icon: Camera,
-    image: 'https://miaoda.feishu.cn/aily/api/v1/files/static/9e0a20d446be43babd32ca634119ee5e_ve_miaoda',
+    image: '/images/pose.jpg',
   },
   {
     number: '04',
@@ -32,7 +32,7 @@ const features = [
     description: '出行不知道怎么穿？根据目的地天气、场景和个人风格，AI 为你推荐最合适的旅行穿搭。智能搭配，让你在旅途中也能保持最佳状态。',
     highlights: ['目的地天气与场景适配', '个人风格智能匹配', '虚拟试衣与搭配预览'],
     icon: Shirt,
-    image: 'https://miaoda.feishu.cn/aily/api/v1/files/static/a4242883286c4098afa698e2f415be22_ve_miaoda',
+    image: '/images/outfit.jpg',
   },
   {
     number: '05',
@@ -40,7 +40,7 @@ const features = [
     description: '美景当前，文案难产？上传照片，AI 根据画面内容和你的心情，自动生成多条风格各异的文案。文艺、幽默、简约随心选，让分享更有格调。',
     highlights: ['基于图片内容智能创作', '多种语气风格可选', 'Emoji 与话题标签自动匹配'],
     icon: MessageSquare,
-    image: 'https://miaoda.feishu.cn/aily/api/v1/files/static/b991c9d2c8f843b6a4772f8da892372a_ve_miaoda',
+    image: '/images/copywriting.jpg',
   },
 ];
 
