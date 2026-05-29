@@ -1,0 +1,46 @@
+{
+  "id": "tourism_photo_style_conversion_1",
+  "pluginKey": "@official-plugins/ai-image-to-image",
+  "pluginVersion": "1.0.20",
+  "name": "旅游照片美化风格转换",
+  "description": "基于参考旅游照片进行美化和风格转换，支持清新、复古、胶片等多种风格选择，可配置多种增强选项，输出处理后的高质量图片。",
+  "icon": "",
+  "paramsSchema": {
+    "type": "object",
+    "properties": {
+      "style": {
+        "description": "目标风格，如：清新、复古、胶片、日系、油画等",
+        "type": "string"
+      },
+      "enhancement": {
+        "type": "array",
+        "description": "增强选项列表，如：亮度提升、色彩饱和度增强、对比度优化、降噪、锐化等",
+        "items": {
+          "description": "单个增强选项",
+          "type": "string"
+        }
+      },
+      "sourceImage": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array",
+        "format": "plugin-image-url",
+        "description": "待处理的旅游原图"
+      }
+    },
+    "required": [
+      "sourceImage",
+      "style"
+    ]
+  },
+  "formValue": {
+    "referenceImages": "{{input.sourceImage}}",
+    "watermark": true,
+    "prompt": "你是专业的旅游照片修图师，擅长根据指定风格对旅游照片进行美化处理。\n\n处理要求：\n1. 整体风格转换为：{{input.style}}风格，保持照片主体和场景的完整性\n2. 应用以下增强选项：{{input.enhancement}}\n3. 保持自然真实的视觉效果，避免过度处理导致失真\n4. 优化光影效果，突出旅游场景的氛围感\n5. 色彩调整要符合风格特性，提升照片美感和观赏性",
+    "ratio": "1:1"
+  },
+  "createdAt": 1780042886859,
+  "updatedAt": 1780042886859,
+  "createdBy": 7462930056116322308
+}

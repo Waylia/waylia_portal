@@ -1,0 +1,41 @@
+{
+  "id": "pose_guidance_analysis_1",
+  "pluginKey": "@official-plugins/ai-image-understanding",
+  "pluginVersion": "1.0.18",
+  "name": "Pose指导分析",
+  "description": "识别照片中的人物姿态，结合场景类型给出专业的拍摄调整建议和优化方向",
+  "icon": "",
+  "paramsSchema": {
+    "required": [
+      "photo",
+      "sceneType"
+    ],
+    "type": "object",
+    "properties": {
+      "sceneType": {
+        "type": "string",
+        "description": "拍摄场景类型，如'人像'、'风景人像'、'街拍'、'证件照'、'运动写真'等"
+      },
+      "photo": {
+        "type": "array",
+        "format": "plugin-image-url",
+        "description": "需要分析的人物照片",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "formValue": {
+    "modelID": "88",
+    "modelParams": {
+      "maxTokens": 8192,
+      "temperature": 0.5
+    },
+    "prompt": "你是一位专业的人像摄影指导专家，拥有丰富的人像拍摄经验和美学理论知识。\n\n请对当前照片中的人物姿态进行分析，并结合{{input.sceneType}}场景的拍摄要求，给出专业的拍摄建议。\n\n分析和建议需要包含以下几个部分：\n1. 姿态优点分析：先肯定当前姿态做得好的地方，给予正向反馈\n2. 姿态问题指出：客观描述当前姿态存在的可优化点，比如肢体摆放、表情管理、重心位置等\n3. 具体调整建议：针对每个问题给出明确、可操作的调整指导，要具体到身体部位的动作细节\n4. 场景适配优化：结合{{input.sceneType}}场景的特点，给出符合该场景风格的姿态优化建议和拍摄技巧\n5. 额外加分建议：提供1-2个能让照片更出彩的小技巧，比如道具使用、眼神方向、光线配合等\n\n输出要求：\n- 语言通俗易懂，方便用户理解和操作\n- 结构清晰，分点阐述，重点突出\n- 语气友好鼓励，避免生硬批评\n- 如果照片中没有人物，直接说明未检测到人物，无法进行姿态分析",
+    "images": "{{input.photo}}"
+  },
+  "createdAt": 1780042891560,
+  "updatedAt": 1780042891560,
+  "createdBy": 7462930056116322308
+}
